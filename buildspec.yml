@@ -20,7 +20,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker push 048362532706.dkr.ecr.ap-south-1.amazonaws.com/node-app
+      - docker push 048362532706.dkr.ecr.ap-south-1.amazonaws.com/node-app:latest
       - echo Writing image definitions file...
       - printf '[{"name":"nodeapp","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - cat imagedefinitions.json 
